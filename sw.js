@@ -1,13 +1,14 @@
 ;
-const CACHE_NAME = 'v1_Pwa-Server',
+const CACHE_NAME = 'v1_pwa-inty-Server',
   urlsToCache = [
     './',
-    './pwa/stayos/jquery.min.js',
-    './pwa/stayos/styles.css',
-    './pwa/images/icons/icon-192x192.png',
-    './pwa/images/icons/icon-144x144.png',
-    './pwa/images/logo.webp',
-    './pwa/images/icons/favicon.png'
+    './index.html',
+    './pwa-inty/stayos/jquery.min.js',
+    './pwa-inty/stayos/styles.css',
+    './pwa-inty/images/icons/icon-192x192.png',
+    './pwa-inty/images/icons/icon-144x144.png',
+    './pwa-inty/images/logo.webp',
+    './pwa-inty/images/icons/favicon.png'
   ]
 
 self.addEventListener('install', e => {
