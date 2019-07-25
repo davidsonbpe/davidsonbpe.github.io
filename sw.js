@@ -2,7 +2,6 @@
 const CACHE_NAME = 'v1_Pwa-Server',
   urlsToCache = [
     './',
-    './index.html',
     './pwa/stayos/jquery.min.js',
     './pwa/stayos/styles.css',
     './pwa/images/icons/icon-192x192.png',
