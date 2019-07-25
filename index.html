@@ -1,25 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
+
 <head>
-	<title>Davidsonbpe</title>
-	<meta charset="utf-8">
-    <meta http-equiv="refresh" content=3;url="https://davidsonbpe.blogspot.com.br/">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
-<style type="text/css">
-    body {
-  background: #4c238d;
-  background-image: url(https://lh3.googleusercontent.com/uKs5arMCrB72YqLhKQm_KBf32P5H2TixHzsCIcqe2IAzBk7DDq2FYfYIdRONkk55EBAUa29RGldOFaClLvlbo6nBjeR6CD_cwLZM-hJG=w1366-h768-rw-no);
-  background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  margin: 0px;
-  color: #d4dbe0;
-  text-align: center;
-}
-</style>
-<script type="text/javascript">
-</script>
+    <meta charset="utf-8">
+    <title>Davidsonbpe Web Apps Developer</title>
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, iniall-scale=1.0, minimal-ui, user-scalable=no"/>
+    <meta name='description' content='Davidsonbpe Tutoriais Notícias Entretenimento e Serviços Web Apps Developer.'/>
+    <meta name='application-name' content='Davidsonbpe'/>
+    <meta name='apple-mobile-web-app-title' content='Davidsonbpe'>
+    <meta name="theme-color" content="#2d2138" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'/>
+    <meta name='mobile-web-app-capable' content='yes'/>
+    <meta name='apple-mobile-web-app-capable' content='yes'/>
+    <meta name='apple-mobile-web-app-status-bar-style' content='black'/>
+    <link rel="manifest" href="manifest.json"/>
+    <link href='/pwa/images/icons/favicon.png' rel='shortcut icon'/>
+    <link rel='icon' sizes='192x192' href='/pwa/images/icons/icon-192x192.png'/>
+    <link rel='apple-touch-icon' href='/pwa/images/icons/icon-192x192.png'/>
+    <meta name='msapplication-TileImage' content='/pwa/images/icons/icon-144x144.png'/>
+    <meta name='msapplication-TileColor' content='#2d2138'/>
+    <script src="./pwa/stayos/jquery.min.js"></script>
+    <link async="true" rel="stylesheet" href="./pwa/stayos/styles.css"/>
+    
+    
 </head>
+
 <body>
+
+    <iframe id="preview-frame" src="https://davidsonbpe.blogspot.com/?" name="preview-frame" frameborder="0" noresize="noresize"></iframe>
+
+    <!--<div class="btn-group"><button class="button" id="btnAddToHomeScreen" tabindex="0" data-trigger="click" class="ui" style="position:fixed;top:6px;right:24px; z-index: 99999;"><img class="fa-chomes" src="pwa/images/chomes.png" height="20"></button></div>-->
+
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./sw.js')
+                .then(reg => console.log('Registro de SW exitoso', reg))
+                .catch(err => console.warn('Error al tratar de registrar el sw', err))
+        }
+        
+            var calcHeight = function() {
+               $('#preview-frame').height($(window).height());
+             }
+
+             $(document).ready(function() {
+               calcHeight();
+             }); 
+
+             $(window).resize(function() {
+               calcHeight();
+             }).load(function() {
+               calcHeight();
+             });
+            document.addEventListener('contextmenu', event => event.preventDefault()); /*---ti---*/
+
+    </script>
+    
+    
 </body>
+
 </html>
