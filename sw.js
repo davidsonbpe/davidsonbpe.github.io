@@ -1,6 +1,5 @@
-;
-const CACHE_NAME = 'v1_pwa-inty-Server',
-  urlsToCache = [
+var cacheName = 'davidsonbpeapp';
+var filesToCache = [
     './',
     './index.html',
     './pwa-inty/stayos/jquery.min.js',
@@ -9,46 +8,22 @@ const CACHE_NAME = 'v1_pwa-inty-Server',
     './pwa-inty/images/icons/icon-192x192.png',
     './pwa-inty/images/icons/icon-144x144.png',
     './pwa-inty/images/logo.webp',
+    './manifest.json',
     './pwa-inty/images/icons/favicon.png'
-  ]
+  ];
 
-self.addEventListener('install', e => {
+self.addEventListener('install', function(e) {
   e.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(cache => {
-        return cache.addAll(urlsToCache)
-          .then(() => self.skipWaiting())
-      })
-      .catch(err => console.log('Falló registro de cache', err))
-  )
-})
+    caches.open(cacheName).then(function(cache) {
+      return cache.addAll(filesToCache);
+    })
+  );
+});
 
-self.addEventListener('activate', e => {
-  const cacheWhitelist = [CACHE_NAME]
-
-  e.waitUntil(
-    caches.keys()
-      .then(cacheNames => {
-        return Promise.all(
-          cacheNames.map(cacheName => {
-            if (cacheWhitelist.indexOf(cacheName) === -1) {
-              return caches.delete(cacheName)
-            }
-          })
-        )
-      })
-      .then(() => self.clients.claim())
-  )
-})
-
-self.addEventListener('fetch', e => {
+self.addEventListener('fetch', function(e) {
   e.respondWith(
-    caches.match(e.request)
-      .then(res => {
-        if (res) {
-          return res
-        }
-        return fetch(e.request)
-      })
-  )
-})
+    caches.match(e.request).then(function(response) {
+      return response || fetch(e.request);
+    })
+  );
+});
