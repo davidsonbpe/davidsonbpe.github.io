@@ -210,7 +210,7 @@
                 cookieSecure: false,
                 debug: false,
                 expires: Infinity,
-                zindex: 255,
+                zindex: 999999,
                 mask: false,
                 maskOpacity: 0.5,
                 maskBackground: '#000',
