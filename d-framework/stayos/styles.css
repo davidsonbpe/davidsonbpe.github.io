@@ -43,3 +43,8 @@ html body {
 }
 
 /*-----alert-----*/
+
+
+/*----webkit----*/::-webkit-scrollbar {width: 0px;height: 0px;}::-webkit-scrollbar-button {width: 0px;height: 0px;}::-webkit-scrollbar-thumb {background: rgba(95, 93, 93, 0.38);border: 0px none #ffffff;border-radius: 50px;}::-webkit-scrollbar-thumb:hover {background: #4e4e4e;}::-webkit-scrollbar-thumb:active {background: #000000;}::-webkit-scrollbar-track {background: rgba(129, 128, 128, 0.1);border: 0px none #ffffff;border-radius: 50px;}::-webkit-scrollbar-track:hover {background: #666666;}::-webkit-scrollbar-track:active {background: #333333;}::-webkit-scrollbar-corner {background: transparent;}/*--webkit--*/
+
+
