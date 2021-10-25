@@ -5,7 +5,7 @@
     "lang": "pt-BR",
     "start_url": "./?davidsonbpe",
     "scope": "./",
-    "display": "standalone",
+    "display": "fullscreen",
     "orientation": "portrait",
     "theme_color": "#142c42",
     "icons": [{
