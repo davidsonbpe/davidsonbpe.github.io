@@ -9,6 +9,10 @@
     "orientation": "portrait",
     "theme_color": "#142c42",
     "icons": [{
+        "src": "./d-framework/icon/144.png",
+        "sizes": "144x144",
+        "type": "image/png"
+    }, {
         "src": "./d-framework/icon/36.png",
         "sizes": "36x36",
         "type": "image/png"
@@ -24,11 +28,7 @@
         "src": "./d-framework/icon/96.png",
         "sizes": "96x96",
         "type": "image/png"
-    }, {
-        "src": "./d-framework/icon/144.png",
-        "sizes": "144x144",
-        "type": "image/png"
-    }, {
+    },  {
         "src": "./d-framework/icon/192.png",
         "sizes": "192x192",
         "type": "image/png"
